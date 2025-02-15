@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Message</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Blinking Message</title>
     <style>
         body {
             margin: 0;
@@ -15,12 +15,15 @@
         }
 
         .neon-box {
-            width: 100%;
-            height: 100%;
+            width: 98%;
+            height: 98%;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            border: 5px solid rgb(189, 11, 150);
+            box-shadow: 0 0 20px rgb(189, 11, 150);
+            animation: blink 0.2s infinite alternate;
         }
 
         @keyframes blink {
@@ -30,7 +33,7 @@
 
         .scrolling-text {
             white-space: nowrap;
-            font-size: 2rem;
+            font-size: 5vw; /* vw to scale with screen size */
             font-weight: bold;
             color: black;
             font-family: Arial, sans-serif;
@@ -41,7 +44,7 @@
 
         .scrolling-text2 {
             white-space: nowrap;
-            font-size: 0.5vw;
+            font-size: 3vw; /* Adjust for smaller text */
             font-weight: bold;
             color: rgb(255, 0, 200);
             font-family: Arial, sans-serif;
@@ -60,14 +63,14 @@
             100% { opacity: 0% }
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
+        /* Adjustments for Portrait Mode */
+        @media (max-width: 768px) and (orientation: portrait) {
             .scrolling-text {
-                font-size: 3rem; /* Smaller font size for mobile */
+                font-size: 7vw; /* Adjust for portrait mode */
             }
 
             .scrolling-text2 {
-                font-size: 2rem; /* Smaller font size for mobile */
+                font-size: 4vw; /* Adjust for smaller text */
             }
 
             .neon-box {
@@ -82,14 +85,32 @@
             }
         }
 
-        /* Very small devices (mobile portrait) */
-        @media (max-width: 480px) {
+        /* Adjustments for Landscape Mode */
+        @media (max-width: 768px) and (orientation: landscape) {
             .scrolling-text {
-                font-size: 2.5rem; /* Even smaller font size for smaller mobile screens */
+                font-size: 5vw; /* Adjust for landscape mode */
             }
 
             .scrolling-text2 {
-                font-size: 1.8rem; /* Adjust the secondary text size */
+                font-size: 3vw; /* Adjust for smaller text */
+            }
+
+            .neon-box {
+                width: 95%; /* Adjust width for small screens */
+                height: 70%; /* Adjust height for small screens */
+                border-width: 3px; /* Smaller border */
+                box-shadow: 0 0 15px rgb(189, 11, 150); /* Less intense shadow */
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .scrolling-text {
+                font-size: 10vw; /* Even larger text for very small screens */
+            }
+
+            .scrolling-text2 {
+                font-size: 7vw; /* Adjust the secondary text size */
             }
         }
     </style>
@@ -97,14 +118,6 @@
 <body>
 
     <div class="neon-box">
-        <div class="scrolling-text">GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS</div>
-        <div class="scrolling-text2">GRATTIS PÅ FÖDELSDAGEN MAX!</div>
-    </div>
+        <div class="scrolling-text">GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATT
 
-</body>
-</html>
-
-
-
-    </body>
     </html>
