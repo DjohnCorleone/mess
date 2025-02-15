@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neon Blinking Message</title>
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: rgb(255, 0, 200);
+            }
+
+            .neon-box {
+                width: 98%;
+                height: 98%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border: 5px solid rgb(189, 11, 150);
+                box-shadow: 0 0 20px rgb(189, 11, 150);
+                animation: blink 0.2s infinite alternate;
+            }
+
+            @keyframes blink {
+                0% { box-shadow: 0 0 10px black; }
+                100% { box-shadow: 0 0 30px black; }
+            }
+
+            .scrolling-text {
+                white-space: nowrap;
+                font-size: 5rem;
+                font-weight: bold;
+                color: black;
+                font-family: Arial, sans-serif;
+                text-shadow: 0 0 10px black, 0 0 20px black;
+                position: relative;
+                animation: scrollText 5s linear infinite;
+            }          
+            
+            .scrolling-text2 {
+                white-space: nowrap;
+                font-size: 4rem;
+                font-weight: bold;
+                color: rgb(255, 0, 200);
+                font-family: Arial, sans-serif;
+                text-shadow: 0 0 10px rgb(255, 0, 200), 0 0 20px rgb(255, 0, 200);
+                position: absolute;
+                animation: scrollText2 0.8s linear infinite;
+            }
+
+            @keyframes scrollText {
+                0% { transform: translateY(100%); }
+                100% { transform: translateY(-100%); }
+                
+            }
+            @keyframes scrollText2 {
+                    0% { opacity: 100% }
+                    100% { opacity:-100% }
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="neon-box">
+            <div class="scrolling-text">GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS <br> GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS GRATTIS</div>
+            <div class="scrolling-text2">GRATTIS PÅ FÖDELSDAGEN MAX!</div>
+        </div>
+
+    </body>
+    </html>
